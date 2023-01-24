@@ -11,6 +11,18 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
-}
+// const titleCased = () => {
+  
+//   const test = tutorials.map (element => {
+//     const words = element.split(" ")
+//     const updatedWords = words.map(letters => letters.replace(letters[0],letters[0].toUpperCase()))
+//     const updatedSenteance = updatedWords.join(" ")
+//     return updatedSenteance})
+
+//   return test
+// }
+
+const titleCased = () => tutorials.map ( sentence => sentence.split(" ").map (words => words.replace (words[0], words[0].toUpperCase())).join(" ")  )
+// // i can't believe i figured out i can do this all on one line.
+
+console.log(titleCased())
